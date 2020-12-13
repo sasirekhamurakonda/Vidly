@@ -6,6 +6,7 @@ import ListGroup from './common/listGroup';
 import {getGenres} from '../services/fakeGenreService.js'; 
 import MoviesTable from './moviesTable';
 import _ from 'lodash';
+
 class Movies extends Component {
     state = { 
         Movies:[],
@@ -52,6 +53,7 @@ class Movies extends Component {
         return {totalCount:filtered.length,data:movies}
     }
     render() { 
+        
         const {length:count}=this.state.Movies;
         const {pageSize,currentPage,selectedGenre,sortColumn}=this.state;
         if(count===0)
